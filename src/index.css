@@ -1,0 +1,89 @@
+#root, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+ font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+
+#app-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.control-panel {
+  width: 15%;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+}
+.control-panel .fieldset {
+  margin-bottom: 10px;
+}
+
+#scene-container {
+  width: 85%;
+  height: 100%;
+  position: relative;
+  order: 2;
+}
+input[type="number"] {
+  width: 85%;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  border: 1px solid;
+  margin: 10px 0;
+}a.proceed-btn {
+  background: black;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  height: 40px;
+  border-radius: 10px;
+}
+span.price {
+  color: darkgreen;
+  font-weight: bold;
+}
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #app-container {
+    flex-direction: column;
+  }
+
+  .control-panel {
+    width: 100%;
+    height: 20%; /* Adjust height for mobile view */
+    order: 1;
+  }
+
+  #scene-container {
+    width: 100%;
+    height: 80%; /* Adjust height for mobile view */
+    order: 2;
+  }
+}
